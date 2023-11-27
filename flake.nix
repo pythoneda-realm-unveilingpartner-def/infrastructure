@@ -80,8 +80,8 @@
       let
         org = "pythoneda-realm-unveilingpartner";
         repo = "infrastructure";
-        version = "0.0.3";
-        sha256 = "104p7q143fm94vyp2x33fpvfkqnx8yzp0chg23npzwjnjk96sww9";
+        version = "0.0.4";
+        sha256 = "0jx6z97l5jghnfwbn6y80ca4cgivfqi6fcsimdifpa4ppvblmzzk";
         pname = "${org}-${repo}";
         pythonpackage = builtins.replaceStrings [ "-" ] [ "." ] pname;
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
