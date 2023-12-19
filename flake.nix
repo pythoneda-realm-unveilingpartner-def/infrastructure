@@ -41,7 +41,7 @@
       inputs.pythoneda-shared-pythoneda-infrastructure.follows =
         "pythoneda-shared-pythoneda-infrastructure";
       url =
-        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.14";
+        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.15";
     };
     pythoneda-shared-artifact-events = {
       inputs.nixos.follows = "nixos";
@@ -71,7 +71,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url = "github:pythoneda-shared-pythoneda-def/infrastructure/0.0.14";
+      url = "github:pythoneda-shared-pythoneda-def/infrastructure/0.0.15";
     };
   };
   outputs = inputs:
