@@ -3,11 +3,40 @@
     "esdbclient": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "pythoneda-shared-pythoneda-infrastructure",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "pythoneda-shared-pythoneda-infrastructure",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "dir": "esdbclient",
+        "lastModified": 1705227856,
+        "narHash": "sha256-mu3F53Bj7HAz8MOMCgtIgQ7ko8A0LG0MArCNqWbPHaM=",
+        "owner": "rydnr",
+        "repo": "nix-flakes",
+        "rev": "783f471d5fd80d558483b16a48499ce2ecb024ad",
+        "type": "github"
+      },
+      "original": {
+        "dir": "esdbclient",
+        "owner": "rydnr",
+        "repo": "nix-flakes",
+        "type": "github"
+      }
+    },
+    "esdbclient_2": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-infrastructure",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-infrastructure",
           "nixos"
         ]
       },
@@ -69,12 +98,8 @@
         ],
         "pythoneda-shared-code-requests-events": "pythoneda-shared-code-requests-events",
         "pythoneda-shared-code-requests-shared": "pythoneda-shared-code-requests-shared",
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-domain"
-        ]
+        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner",
+        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain"
       },
       "locked": {
         "lastModified": 1705434835,
@@ -104,13 +129,9 @@
         ],
         "pythoneda-shared-code-requests-jupyterlab": "pythoneda-shared-code-requests-jupyterlab",
         "pythoneda-shared-nix-flake-shared": "pythoneda-shared-nix-flake-shared_5",
-        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner",
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-domain"
-        ],
-        "pythoneda-shared-pythoneda-infrastructure": [
-          "pythoneda-shared-pythoneda-infrastructure"
-        ]
+        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner_2",
+        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain_2",
+        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure"
       },
       "locked": {
         "lastModified": 1705434883,
@@ -173,12 +194,8 @@
         "nixos": [
           "nixos"
         ],
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-domain"
-        ]
+        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner_3",
+        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain_3"
       },
       "locked": {
         "lastModified": 1705434266,
@@ -192,6 +209,30 @@
         "owner": "pythoneda-shared-artifact-def",
         "ref": "0.0.26",
         "repo": "events",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-banner": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705000493,
+        "narHash": "sha256-95OtHjJreiv5Aamc3CYDbd3S8dNFvjVgoYyUx4UO5OU=",
+        "owner": "pythoneda-shared-def",
+        "repo": "banner",
+        "rev": "87e640d31c9687baf5c47f42573b1472839ad3b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-def",
+        "ref": "0.0.41",
+        "repo": "banner",
         "type": "github"
       }
     },
@@ -342,6 +383,31 @@
         "owner": "pythoneda-shared-code-requests-def",
         "ref": "0.0.16",
         "repo": "shared",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-domain": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ],
+        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner_4"
+      },
+      "locked": {
+        "lastModified": 1705047565,
+        "narHash": "sha256-90MhuGqyrW5PHz8O+ZjFqJwkxTArTQd8Lvfxz2AkDLw=",
+        "owner": "pythoneda-shared-def",
+        "repo": "domain",
+        "rev": "c1aaf4442a09e3558c3d152a9fe8d4b57f9976f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-def",
+        "ref": "0.0.22",
+        "repo": "domain",
         "type": "github"
       }
     },
@@ -555,6 +621,33 @@
         "type": "github"
       }
     },
+    "pythoneda-shared-infrastructure": {
+      "inputs": {
+        "esdbclient": "esdbclient_2",
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ],
+        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner_5",
+        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain_4"
+      },
+      "locked": {
+        "lastModified": 1705434197,
+        "narHash": "sha256-EzJZEbYyFWAfJQQ4YrW6eY7nHk07OiR43aBfe+FnGMk=",
+        "owner": "pythoneda-shared-def",
+        "repo": "infrastructure",
+        "rev": "615c8489fa83d31e7913cc94366bb2472272d335",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-def",
+        "ref": "0.0.19",
+        "repo": "infrastructure",
+        "type": "github"
+      }
+    },
     "pythoneda-shared-nix-flake-shared": {
       "inputs": {
         "flake-utils": [
@@ -758,11 +851,11 @@
     "pythoneda-shared-pythoneda-banner": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-code-events-infrastructure",
+          "pythoneda-shared-artifact-code-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-code-events-infrastructure",
+          "pythoneda-shared-artifact-code-events",
           "nixos"
         ]
       },
@@ -784,9 +877,89 @@
     "pythoneda-shared-pythoneda-banner_2": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705000493,
+        "narHash": "sha256-95OtHjJreiv5Aamc3CYDbd3S8dNFvjVgoYyUx4UO5OU=",
+        "owner": "pythoneda-shared-pythoneda-def",
+        "repo": "banner",
+        "rev": "87e640d31c9687baf5c47f42573b1472839ad3b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-pythoneda-def",
+        "ref": "0.0.41",
+        "repo": "banner",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-pythoneda-banner_3": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-artifact-events",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-artifact-events",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705000493,
+        "narHash": "sha256-95OtHjJreiv5Aamc3CYDbd3S8dNFvjVgoYyUx4UO5OU=",
+        "owner": "pythoneda-shared-pythoneda-def",
+        "repo": "banner",
+        "rev": "87e640d31c9687baf5c47f42573b1472839ad3b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-pythoneda-def",
+        "ref": "0.0.41",
+        "repo": "banner",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-pythoneda-banner_4": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-domain",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-domain",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705000493,
+        "narHash": "sha256-95OtHjJreiv5Aamc3CYDbd3S8dNFvjVgoYyUx4UO5OU=",
+        "owner": "pythoneda-shared-pythoneda-def",
+        "repo": "banner",
+        "rev": "87e640d31c9687baf5c47f42573b1472839ad3b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-pythoneda-def",
+        "ref": "0.0.41",
+        "repo": "banner",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-pythoneda-banner_5": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-infrastructure",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-infrastructure",
           "nixos"
         ]
       },
@@ -808,12 +981,105 @@
     "pythoneda-shared-pythoneda-domain": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-code-events",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-code-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-code-events",
+          "pythoneda-shared-pythoneda-banner"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705047565,
+        "narHash": "sha256-90MhuGqyrW5PHz8O+ZjFqJwkxTArTQd8Lvfxz2AkDLw=",
+        "owner": "pythoneda-shared-pythoneda-def",
+        "repo": "domain",
+        "rev": "c1aaf4442a09e3558c3d152a9fe8d4b57f9976f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-pythoneda-def",
+        "ref": "0.0.22",
+        "repo": "domain",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-pythoneda-domain_2": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
+          "nixos"
+        ],
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
+          "pythoneda-shared-pythoneda-banner"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705047565,
+        "narHash": "sha256-90MhuGqyrW5PHz8O+ZjFqJwkxTArTQd8Lvfxz2AkDLw=",
+        "owner": "pythoneda-shared-pythoneda-def",
+        "repo": "domain",
+        "rev": "c1aaf4442a09e3558c3d152a9fe8d4b57f9976f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-pythoneda-def",
+        "ref": "0.0.22",
+        "repo": "domain",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-pythoneda-domain_3": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-artifact-events",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-artifact-events",
+          "nixos"
+        ],
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-events",
+          "pythoneda-shared-pythoneda-banner"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705047565,
+        "narHash": "sha256-90MhuGqyrW5PHz8O+ZjFqJwkxTArTQd8Lvfxz2AkDLw=",
+        "owner": "pythoneda-shared-pythoneda-def",
+        "repo": "domain",
+        "rev": "c1aaf4442a09e3558c3d152a9fe8d4b57f9976f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-shared-pythoneda-def",
+        "ref": "0.0.22",
+        "repo": "domain",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-pythoneda-domain_4": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-infrastructure",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-infrastructure",
+          "nixos"
+        ],
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ]
       },
@@ -836,15 +1102,19 @@
       "inputs": {
         "esdbclient": "esdbclient",
         "flake-utils": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-artifact-code-events-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -870,9 +1140,9 @@
         "pythoneda-shared-artifact-code-events": "pythoneda-shared-artifact-code-events",
         "pythoneda-shared-artifact-code-events-infrastructure": "pythoneda-shared-artifact-code-events-infrastructure",
         "pythoneda-shared-artifact-events": "pythoneda-shared-artifact-events_2",
-        "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner_2",
-        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain",
-        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure"
+        "pythoneda-shared-banner": "pythoneda-shared-banner",
+        "pythoneda-shared-domain": "pythoneda-shared-domain",
+        "pythoneda-shared-infrastructure": "pythoneda-shared-infrastructure"
       }
     },
     "stringtemplate3": {
