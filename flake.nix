@@ -29,7 +29,7 @@
         "pythoneda-shared-banner";
       inputs.pythoneda-shared-domain.follows =
         "pythoneda-shared-domain";
-      url = "github:pythoneda-shared-artifact-def/code-events/0.0.21";
+      url = "github:pythoneda-shared-artifact-def/code-events/0.0.22";
     };
     pythoneda-shared-artifact-code-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -41,7 +41,7 @@
       inputs.pythoneda-shared-infrastructure.follows =
         "pythoneda-shared-infrastructure";
       url =
-        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.23";
+        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.24";
     };
     pythoneda-shared-artifact-events = {
       inputs.nixos.follows = "nixos";
@@ -50,12 +50,12 @@
         "pythoneda-shared-banner";
       inputs.pythoneda-shared-domain.follows =
         "pythoneda-shared-domain";
-      url = "github:pythoneda-shared-artifact-def/events/0.0.30";
+      url = "github:pythoneda-shared-artifact-def/events/0.0.31";
     };
     pythoneda-shared-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-def/banner/0.0.46";
+      url = "github:pythoneda-shared-def/banner/0.0.47";
     };
     pythoneda-shared-domain = {
       inputs.flake-utils.follows = "flake-utils";
@@ -71,7 +71,7 @@
         "pythoneda-shared-banner";
       inputs.pythoneda-shared-domain.follows =
         "pythoneda-shared-domain";
-      url = "github:pythoneda-shared-def/infrastructure/0.0.22";
+      url = "github:pythoneda-shared-def/infrastructure/0.0.23";
     };
   };
   outputs = inputs:
