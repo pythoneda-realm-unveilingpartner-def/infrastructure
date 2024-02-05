@@ -29,7 +29,7 @@
         "pythoneda-shared-banner";
       inputs.pythoneda-shared-domain.follows =
         "pythoneda-shared-domain";
-      url = "github:pythoneda-shared-artifact-def/code-events/0.0.31";
+      url = "github:pythoneda-shared-artifact-def/code-events/0.0.32";
     };
     pythoneda-shared-artifact-code-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -41,7 +41,7 @@
       inputs.pythoneda-shared-infrastructure.follows =
         "pythoneda-shared-infrastructure";
       url =
-        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.33";
+        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.34";
     };
     pythoneda-shared-artifact-events = {
       inputs.nixos.follows = "nixos";
