@@ -21,19 +21,19 @@
     "Nix flake for pythoneda-realm-unveilingpartner/infrastructure";
   inputs = rec {
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
-    nixos.url = "github:NixOS/nixpkgs/24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/24.05";
     pythoneda-shared-artifact-code-events = {
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/code-events/0.0.62";
+      url = "github:pythoneda-shared-artifact-def/code-events/0.0.63";
     };
     pythoneda-shared-artifact-code-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-artifact-code-events.follows =
         "pythoneda-shared-artifact-code-events";
       inputs.pythoneda-shared-pythonlang-domain.follows =
@@ -41,37 +41,37 @@
       inputs.pythoneda-shared-pythonlang-infrastructure.follows =
         "pythoneda-shared-pythonlang-infrastructure";
       url =
-        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.66";
+        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.67";
     };
     pythoneda-shared-artifact-events = {
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/events/0.0.71";
+      url = "github:pythoneda-shared-artifact-def/events/0.0.72";
     };
     pythoneda-shared-pythonlang-banner = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.71";
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.72";
     };
     pythoneda-shared-pythonlang-domain = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.93";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.94";
     };
     pythoneda-shared-pythonlang-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-pythonlang-def/infrastructure/0.0.71";
+      url = "github:pythoneda-shared-pythonlang-def/infrastructure/0.0.72";
     };
   };
   outputs = inputs:
@@ -94,10 +94,10 @@
         archRole = "R";
         space = "D";
         layer = "I";
-        nixosVersion = builtins.readFile "${nixos}/.version";
-        nixpkgsRelease = "nixos-${nixosVersion}";
+        nixpkgsVersion = builtins.readFile "${nixpkgs}/.version";
+        nixpkgsRelease = "nixpkgs-${nixpkgsVersion}";
         shared = import "${pythoneda-shared-pythonlang-banner}/nix/shared.nix";
-        pkgs = import nixos { inherit system; };
+        pkgs = import nixpkgs { inherit system; };
         pythoneda-realm-unveilingpartner-infrastructure-for = { python
           , pythoneda-shared-artifact-events
           , pythoneda-shared-artifact-code-events
